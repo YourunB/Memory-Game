@@ -15,6 +15,79 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
+.wrapper {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__name img {
+  height: 50px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px 4px rgb(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 4.5px 4.5px 4.5px 4.5px rgb(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transition: 0.2s;
+  transform: scale(0.9);
+  background-color: rgb(255, 255, 132);
+}
+
+.container {
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 10%);
+  gap: 2%;
+  perspective: 2000px;
+  height: fit-content;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
