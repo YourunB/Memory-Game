@@ -15,6 +15,62 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
+.instruction {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 10px;
+  min-height: calc(100vh - 20px);
+  width: calc(100% - 20px);
+  background: white;
+  opacity: 0.9;
+  transition: 1.5s;
+  text-align: center;
+  color: gray;
+  transform: translateY(-110%);
+  cursor: default;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.instruction-show {
+  transform: translateY(0);
+}
+
+.instruction__chips {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.instruction__chips:nth-of-type(2) {
+  border: none;
+}
+
+.instruction__chips img {
+  max-width: 200px;
+  width: 24%;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px 4px rgb(0, 0, 0, 0.2);
+}
+
+.instruction__chips_chip {
+  position: relative;
+}
+
+.instruction__chips_chip img:nth-child(1) {
+  width: 100%;
+}
+
+.instruction__chips_chip img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .welcome {
   position: fixed;
   left: 0;
