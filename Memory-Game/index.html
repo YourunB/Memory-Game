@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/normalize.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/svg/favicon.svg">
+  <title>Memory Game</title>
+</head>
+<body>
+
+  <audio src="assets/audio/music.mp3" loop class="unvisible" id="audio-music"></audio>
+  <audio src="assets/audio/click.mp3" class="unvisible" id="audio-click"></audio>
+  <audio src="assets/audio/congratulation.mp3" class="unvisible" id="audio-congratulation"></audio>
+  <audio src="assets/audio/shuffle.mp3" class="unvisible" id="audio-shuffle"></audio>
+  <audio src="assets/audio/complete.mp3" class="unvisible" id="audio-complete"></audio>
+
+  <img src="assets/imges/salut.gif" alt="Salut" class="salut unvisible" id="salut"> 
+  <div id="message" class="message unvisible"></div>
+  <div class="score" id="window-score">
+    <img class="btn score__btn" src="assets/svg/close.svg" alt="Close" id="btn-close-score">
+    <div class="score__window">
+      <img src="assets/imges/brain.png" alt="Brain">
+      <h3>TOP 10 RESULTS OF THE GAMES:</h3>
+      <div class="score__window_results" id="results-container"></div>
+    </div>
+  </div>
+
+  <div class="instruction" id="instruction-window">
+    <h3>INSTRUCTIONS FOR THE MEMORY GAME</h3>
+    <p>Within 7 seconds you need to remember the position of the chips</p>
+    <div class="instruction__chips">
+      <img src="assets/imges/0.jpg" alt="chip">
+      <img src="assets/imges/3.jpg" alt="chip">
+      <img src="assets/imges/3.jpg" alt="chip">
+      <img src="assets/imges/4.jpg" alt="chip">
+    </div>
+    <p>After 7 seconds, the cards turn over and you need to find the same pairs of cards</p>
+    <div class="instruction__chips">
+      <img src="assets/imges/lamp.jpg" alt="chip">
+      <div class="instruction__chips_chip">
+        <img src="assets/imges/3.jpg" alt="chip">
+        <img src="assets/imges/yes.png" alt="yes">
+      </div>
+      <div class="instruction__chips_chip">
+        <img src="assets/imges/3.jpg" alt="chip">
+        <img src="assets/imges/yes.png" alt="yes">
+      </div>
+      <img src="assets/imges/lamp.jpg" alt="chip">
+    </div>
+    <div class="instruction__chips">
+      <img src="assets/imges/lamp.jpg" alt="chip">
+      <img src="assets/imges/lamp.jpg" alt="chip">
+      <div class="instruction__chips_chip">
+        <img src="assets/imges/3.jpg" alt="chip">
+        <img src="assets/imges/no.png" alt="yes">
+      </div>
+      <div class="instruction__chips_chip">
+        <img src="assets/imges/4.jpg" alt="chip">
+        <img src="assets/imges/no.png" alt="yes">
+      </div>
+    </div>
+    <p>The game ends when you have opened all the cards. The fewer moves you needed to open the cards, the better your result will be</p>
+  </div>
+
+  <div class="welcome" id="welcome-page">
+    <img class="welcome__image" src="assets/imges/brain.png" alt="Brain">
+    <div class="welcome__login">
+      <h3>MEMORY GAME</h3>
+      <input class="welcome__login_input" placeholder="Enter name" id="input-name" autocomplete="off">
+      <div>
+        <button class="welcome__login_btn" id="btn-start" disabled>START</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header>
+      <div>
+        <img class="btn" src="assets/svg/score.svg" alt="Score" id="btn-score" title="Score">
+        <img class="btn" src="assets/svg/question.svg" alt="Instruction" id="btn-instruction" title="Instruction">
+      </div>
+      <h1 class="header__name">Train Your Brain <img src="assets/imges/brain.png" alt="Brain"></h1>
+      <img class="btn" src="assets/svg/refresh.svg" alt="Refresh" id="btn-refresh" title="Play again">
+    </header>
+
+    <div class="container">
+      <main id="main" class="unvisible"></main>
+    </div>
+  </div>
+
+  <footer class="unvisible">
+    <p class="footer__year">&copy; 2023</p>
+    <a href="https://github.com/yourunb" title="Developer" target="_blank"><img class="footer__logo" src="assets/svg/github.svg" alt="Github"></a>
+  </footer>
+
+  <script src="index.js"></script>
+    
+</body>
+</html>
